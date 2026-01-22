@@ -2,35 +2,152 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Proyecto CI/CD</title>
+    <title>Caso de Estudio eBay - CI/CD</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f6f8;
+            color: #333;
+        }
+
+        .header {
+            background-color: #0064d2;
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .header h1 {
+            font-size: 38px;
+            margin: 0;
+        }
+
+        .header p {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        .nav {
+            background-color: #003087;
+            text-align: center;
+            padding: 15px;
+        }
+
+        .nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 15px;
+        }
+
+        .container {
+            padding: 40px 80px;
+        }
+
+        .card {
+            background-color: white;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #0064d2;
+        }
+
+        ul {
+            margin-left: 20px;
+        }
+
+        footer {
+            background-color: #003087;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 14px;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Bienvenido a la Página de Fernando Vaca</h1>
+    <div class="header">
+        <h1>Caso de Estudio: eBay y CI/CD</h1>
+        <p>Implementación de Integración y Despliegue Continuo</p>
+    </div>
 
-    <nav>
-        <a href="#sobre-mi">Sobre mí</a> |
-        <a href="#habilidades">Habilidades</a> |
-        <a href="#contacto">Contacto</a>
-    </nav>
+    <div class="nav">
+        <a href="#descripcion">Descripción</a>
+        <a href="#problema">Problema</a>
+        <a href="#solucion">Solución</a>
+        <a href="#pipeline">Pipeline</a>
+    </div>
 
-    <section id="sobre-mi">
-        <h2>Sobre Mí</h2>
-        <p>Soy un desarrollador DevOps con interés en CI/CD y automatización.</p>
-    </section>
+    <div class="container">
 
-    <section id="habilidades">
-        <h2>Habilidades</h2>
-        <ul>
-            <li>Git y GitHub</li>
-            <li>CI/CD</li>
-            <li>Docker</li>
-            <li>Linux</li>
-        </ul>
-    </section>
+        <div class="card" id="descripcion">
+            <h2>Descripción de la Empresa</h2>
+            <p>
+                eBay es una plataforma global de comercio electrónico que permite a los usuarios
+                comprar y vender productos mediante subastas y ventas directas, conectando millones
+                de personas en todo el mundo.
+            </p>
+        </div>
 
-    <section id="contacto">
-        <h2>Contacto</h2>
-        <p>Email: fernando@example.com</p>
-    </section>
+        <div class="card" id="problema">
+            <h2>Estado Actual y Problemática</h2>
+            <p>
+                Debido al crecimiento acelerado de la plataforma, eBay enfrentó problemas en la
+                entrega de nuevas funcionalidades, correcciones y mejoras de seguridad.
+            </p>
+            <ul>
+                <li>Código centralizado en SVN</li>
+                <li>Despliegues manuales cada 15 días</li>
+                <li>Ambientes separados (DEV, QA, PROD)</li>
+                <li>Alto riesgo de errores humanos</li>
+                <li>Rollback no automatizado</li>
+                <li>Uso limitado de Jenkins solo para CI</li>
+            </ul>
+        </div>
+
+        <div class="card" id="solucion">
+            <h2>Implementación de CI/CD</h2>
+            <p>
+                eBay adoptó prácticas de Integración Continua, Entrega Continua y Despliegue Continuo
+                para liberar cambios pequeños, frecuentes y seguros.
+            </p>
+            <ul>
+                <li>Automatización de tareas repetitivas</li>
+                <li>Despliegues controlados bajo supervisión</li>
+                <li>Colaboración entre desarrollo y operaciones</li>
+                <li>Software siempre listo para producción</li>
+            </ul>
+        </div>
+
+        <div class="card" id="pipeline">
+            <h2>Pipeline y Pruebas</h2>
+            <p>
+                Se construyó un pipeline automatizado donde cada cambio pasa por validaciones
+                antes de llegar a producción.
+            </p>
+            <ul>
+                <li>Pruebas unitarias</li>
+                <li>Pruebas automáticas simulando usuarios</li>
+                <li>Pruebas finales de usuario</li>
+            </ul>
+            <p>
+                Esto permitió reducir riesgos, mejorar la calidad del software y acelerar los tiempos
+                de entrega.
+            </p>
+        </div>
+
+    </div>
+
+    <footer>
+        Fernando Vaca – DevOps | Caso de Estudio eBay – CI/CD
+    </footer>
+
 </body>
 </html>
